@@ -25,8 +25,25 @@ const SidebarStore = reactive({
     }
   },
   toggleMinimize() {
+    console.log("hello");
+    document.body.classList.remove("g-sidenav-pinned");
     this.isMinimized = !this.isMinimized;
     let docClasses = document.body.classList;
+
+    if (window.innerWidth <= 768) {
+      this.hovered = false; ///
+      if (!this.isMinimized) {
+        document.body.classList.remove("g-sidenav-pinned");
+        let docClasses = document.body.classList;
+        docClasses.remove("g-sidenav-show");
+        docClasses.add("g-sidenav-hide");
+        setTimeout(() => {
+          docClasses.remove("g-sidenav-hide");
+          docClasses.add("g-sidenav-hidden");
+        }, 100);
+      }
+    }
+
     if (this.isMinimized) {
       docClasses.add("g-sidenav-hidden");
       docClasses.remove("g-sidenav-pinned");
@@ -41,6 +58,7 @@ const SidebarStore = reactive({
     }
   },
   onMouseEnter() {
+    document.body.classList.add("g-sidenav-pinned");
     this.hovered = true;
     if (this.isMinimized) {
       document.body.classList.add("g-sidenav-show");
@@ -48,8 +66,10 @@ const SidebarStore = reactive({
     }
   },
   onMouseLeave() {
-    this.hovered = false;
+    console.log("outside click");
+    this.hovered = false; ///
     if (this.isMinimized) {
+      document.body.classList.remove("g-sidenav-pinned");
       let docClasses = document.body.classList;
       docClasses.remove("g-sidenav-show");
       docClasses.add("g-sidenav-hide");

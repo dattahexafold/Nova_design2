@@ -356,7 +356,7 @@
 
 .g-sidenav-show {
     .sidenav {
-        .navbar-brand,
+        .navbar-brand, 
         .navbar-heading {
             display: block;
         }
@@ -367,7 +367,7 @@
         }
     }
 }
-
+// g-sidenav-pinned
 .g-sidenav-pinned {
     .sidenav {
         max-width: $navbar-vertical-open-width !important;
@@ -424,10 +424,11 @@
 
 @include media-breakpoint-down(lg) {
     .sidenav {
+        
         // transform: translateX(-$navbar-vertical-width);
 
         // &.fixed-left + .main-content {
-        //     // margin-left: 0 !important;
+        //     margin-left: 0 !important;
         // }
     }
 
@@ -479,7 +480,7 @@
         background-color: $white;
     }
 }
-
+// .g-sidenav-show
 .sidenav-toggler {
     cursor: pointer;
 

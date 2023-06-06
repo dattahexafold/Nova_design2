@@ -13,7 +13,7 @@
         <div class="ml-auto">
           <!-- Sidenav togglerr -->
           <div
-            class="sidenav-toggler mr-3 mr-xl-0 d-xl-block"
+            class="sidenav-toggler mr-3 mr-xl-0 d-xl-block "
             :class="{ active: !$sidebar.isMinimized }"
             @click="minimizeSidebar"
           >
