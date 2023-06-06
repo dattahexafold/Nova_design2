@@ -136,14 +136,14 @@
         </ul>
       </template>
     </side-bar>
-    <!-- <div class="main-content">
-      <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar>
+    <div class="main-content">
+      <!-- <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar> -->
 
-      <div @click="$sidebar.displaySidebar(false)">
-        <router-view></router-view>
-      </div> -->
+<router-view>
+  <Performance/> 
+</router-view>
     <!-- <content-footer v-if="!$route.meta.hideFooter"></content-footer> -->
-    <!-- </div>  -->
+    </div> 
   </div>
 </template>
 <script>
@@ -168,9 +168,11 @@ function initScrollbar(className) {
 
 // import DashboardNavbar from "./DashboardNavbar.vue";
 // import ContentFooter from "./ContentFooter.vue";
+import Performance from "../Components/performance.vue"
 
 export default {
   components: {
+    Performance
     // DashboardNavbar,
     // ContentFooter,
   },
