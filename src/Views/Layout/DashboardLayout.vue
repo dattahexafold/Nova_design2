@@ -127,16 +127,12 @@
 
       <template v-slot:links-after>
         <hr class="my-3" />
-        <h6 class="navbar-heading p-0 text-muted">Documentation</h6>
-
         <ul class="navbar-nav mb-md-3">
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/vue-argon-dashboard-pro/documentation"
-              target="_blank">
-              <i class="ni ni-spaceship"></i>
-              <span class="nav-link-text">Setting</span>
-            </a>
-          </li>
+          <sidebar-item :link="{
+            name: 'Setting',
+            icon: 'ni ni-spaceship',
+            path: '/setting',
+          }"></sidebar-item>  
         </ul>
       </template>
     </side-bar>
