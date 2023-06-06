@@ -33,15 +33,15 @@ const SidebarStore = reactive({
     if (window.innerWidth <= 820) {
       this.hovered = false; ///
       if (!this.isMinimized) {
-        document.body.classList.remove("g-sidenav-pinned");
+        // document.body.classList.remove("g-sidenav-pinned");
         let docClasses = document.body.classList;
         docClasses.add("g-sidenav-hidden");
         docClasses.remove("g-sidenav-show");
         docClasses.add("g-sidenav-hide");
-        setTimeout(() => {
+        // setTimeout(() => {
           docClasses.remove("g-sidenav-hide");
           docClasses.add("g-sidenav-hidden");
-        }, 100);
+        // },0);
       }
     }
     if (this.isMinimized) {
