@@ -7,8 +7,9 @@
     <div class="scrollbar-inner" ref="sidebarScrollArea">
       <div class="sidenav-header d-flex align-items-center">
         <a class="navbar-brand" href="#">
-          <h1 class="navbar-brand-img">Nova</h1>
-          <!-- <img :src="logo" class="navbar-brand-img" alt="Sidebar logo" /> -->
+          <!-- <h1 class="navbar-brand-img">Nova</h1> -->
+        <img src="../../assets/Nova_Logo.svg" class="navbar-brand-img" alt="Sidebar logo" />
+   <!-- <img :src="logo" class="navbar-brand-img" alt="Sidebar logo" /> -->
         </a>
         <div class="ml-auto">
           <!-- Sidenav togglerr -->
