@@ -1,7 +1,7 @@
 //
 // Vertical navbar + Sidenav
 //
-
+//sidenav
 
 .navbar-vertical {
     padding-top: 0;
@@ -424,11 +424,11 @@
 
 @include media-breakpoint-down(lg) {
     .sidenav {
-        transform: translateX(-$navbar-vertical-width);
+        // transform: translateX(-$navbar-vertical-width);
 
-        &.fixed-left + .main-content {
-            margin-left: 0 !important;
-        }
+        // &.fixed-left + .main-content {
+        //     // margin-left: 0 !important;
+        // }
     }
 
     .g-sidenav-pinned {
